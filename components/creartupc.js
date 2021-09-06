@@ -1,64 +1,47 @@
 import React from 'react'
 import { View,Text,StyleSheet,TouchableOpacity,FlatList } from 'react-native'
-import BarraNavegacion from './barraNavegacion'
+import { PRODUCTS } from '../data/products';
+import ButtonLong from './buttonLong';
+const CrearPc = ({ navigation, route })=>{
 
-
-const CrearPc = ({setSeleccionRecomendada, setRecomendada,recomendada})=>{
-
-    
-
-    const handleRecomendadas = (item) => {
-        setSeleccionRecomendada(true)
-        setRecomendada(item)
+ 
+   
+    const handleSelectedProduct = (item) => {
+        navigation.navigate('Recommended', {
+          id: item.id,
+          title: item.title,
+          productID:item.id
+        });
+      }
+      const handleSelectedGame = () => {
+        navigation.navigate('Game');
+      }
+      const handleSelectedPrograms = () => {
+        navigation.navigate('Programs');
+      }
+      const handleSelectedBuildPc = () => {
+        navigation.navigate('BuildPc');
       }
 
     
 
-      const DATA = [
-        {
-          id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-          title: 'Item 1',
-          price: 15000,
-          description:"kjfgshgsghasgjlhaghaighjaio"
-        },
-        {
-          id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-          title: 'Item 2',
-          price: 15000,
-          description:"kjfgshgsghasgjlhaghaighjaio"
-        },
-        {
-          id: '58694a0f-3da1-471f-bd96-145571e29d72',
-          title: 'Item 3',
-          price: 15000,
-          description:"kjfgshgsghasgjlhaghaighjaio"
-        },
-        {
-            id: '45433a0f-3da1-471f-bd96-145571e29d72',
-            title: 'Item 4',
-            price: 15000,
-            description:"kjfgshgsghasgjlhaghaighjaio"
-          },
-      ];
+     
 
 
     return(
         <View style={styles.conteiner}>
-           <BarraNavegacion setSeleccionRecomendada={setSeleccionRecomendada}></BarraNavegacion>
             <View style={styles.fila}>
-                <TouchableOpacity style={styles.cuadrado}></TouchableOpacity>
-                <TouchableOpacity style={styles.cuadrado}></TouchableOpacity>
+                <TouchableOpacity style={styles.cuadrado} onPress={handleSelectedPrograms}></TouchableOpacity>
+                <TouchableOpacity style={styles.cuadrado} onPress={handleSelectedGame}></TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.contendorBotonLargo} > 
-                <Text style={styles.textBotonLargo}>ARMAR MI PC MANUALMENTE</Text>
-            </TouchableOpacity>
+            <ButtonLong text={"ARMAR MI PC MANUALMENTE"} handleSelected={handleSelectedBuildPc}></ButtonLong>
             <View style={styles.titulorecomendadas}>
                  <Text style={styles.textrecomendadas}>Recomendadas</Text>
             </View>
             <FlatList
-                 data={DATA}
+                 data={PRODUCTS}
                  renderItem={(data) => (
-                   <TouchableOpacity onPress={()=>{handleRecomendadas(data.item)}} style={styles.card}><Text>{data.item.title}</Text></TouchableOpacity> 
+                   <TouchableOpacity onPress={()=>{ handleSelectedProduct(data.item)}} style={styles.card}><Text>{data.item.title}</Text></TouchableOpacity> 
                     )}
                  keyExtractor={item => item.id}
              />
@@ -82,19 +65,6 @@ cuadrado:{
 },
 fila:{
     flexDirection:"row",
-},
-contendorBotonLargo:{
-    margin:10,
-    backgroundColor:"#000000",
-    height:50,
-    borderRadius:5
-},
-textBotonLargo:{
-    fontSize:16,
-    textAlign:"center",
-    color:"#ffffff",
-    textAlignVertical:"center",
-    height:50,
 },
 titulorecomendadas:{
     height:30,
