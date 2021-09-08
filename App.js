@@ -4,6 +4,8 @@ import { StyleSheet} from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import PcGamerNavigator from './navigation/PcGamerNavigation';
+import { Provider } from 'react-redux';
+import store from './store';
 
 
 
@@ -18,24 +20,13 @@ export default function App() {
 
   if (!loaded) return <AppLoading />
 
-  /*
-  const content = seleccionRecomendada
-  ? <Recomendada recomendada={recomendada} setSeleccionRecomendada={setSeleccionRecomendada} />
-  : <CrearPc setSeleccionRecomendada={setSeleccionRecomendada} setRecomendada={setRecomendada} recomendada={recomendada}  />  
-*/
-
   return (
+    <Provider store={store}>
     <PcGamerNavigator />
+    </Provider>
   );
 }
 
 const styles = StyleSheet.create({
-  /*
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  */
+
 });

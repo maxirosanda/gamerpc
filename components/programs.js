@@ -8,7 +8,7 @@ const Programs = ({ navigation, route })=>{
     return(
         <View style={styles.conteiner}>
         <TextInput style={styles.search}  placeholder="    Buscar" />
-            <FlatList style={styles.circles}  data={PROGRAMS} keyExtractor={item => item.id} renderItem={(data) => (
+            <FlatList style={styles.circles}  numColumns={3}  data={PROGRAMS} keyExtractor={item => item.id} renderItem={(data) => (
                 < Circle item={data.item} />  
             )}/> 
             <ButtonLong text={"Ver Opciones de Computadoras"} handleSelected={()=>{}}></ButtonLong>

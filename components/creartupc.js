@@ -1,9 +1,11 @@
 import React from 'react'
 import { View,Text,StyleSheet,TouchableOpacity,FlatList } from 'react-native'
-import { PRODUCTS } from '../data/products';
+import { useSelector } from 'react-redux';
 import ButtonLong from './buttonLong';
+
 const CrearPc = ({ navigation, route })=>{
 
+  const products = useSelector(state => state.products.list)
  
    
     const handleSelectedProduct = (item) => {
@@ -39,7 +41,7 @@ const CrearPc = ({ navigation, route })=>{
                  <Text style={styles.textrecomendadas}>Recomendadas</Text>
             </View>
             <FlatList
-                 data={PRODUCTS}
+                 data={products}
                  renderItem={(data) => (
                    <TouchableOpacity onPress={()=>{ handleSelectedProduct(data.item)}} style={styles.card}><Text>{data.item.title}</Text></TouchableOpacity> 
                     )}
