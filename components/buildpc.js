@@ -1,14 +1,15 @@
 import React from 'react'
 import { View,Text,StyleSheet,FlatList} from 'react-native'
-import { COMPONENTS } from '../data/components';
+import { useSelector, useDispatch } from 'react-redux';
 import Card from './card'
+
 const BuildPc = ({ navigation, route })=>{
-    
+    const components = useSelector(state => state.components.list)
     return(
         <View style={styles.conteiner}>
 
                 <FlatList
-                 data={COMPONENTS}
+                 data={components}
                  renderItem={(data) => (
                   <Card item={data.item}/>
                     )}

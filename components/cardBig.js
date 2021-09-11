@@ -1,11 +1,10 @@
 import React from 'react'
 import { View,Text,StyleSheet,TouchableOpacity} from 'react-native'
 
-const CardBig = ({item})=>{
-    
+const CardBig = ({component})=>{
     return(
         <TouchableOpacity style={styles.card}>
-      <Text>{item.name}</Text> 
+      <Text>{component.item.name}</Text> 
         </TouchableOpacity>
     )
 }

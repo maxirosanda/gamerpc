@@ -1,18 +1,19 @@
 import React from 'react'
 import { View,Text,StyleSheet,TouchableOpacity,FlatList } from 'react-native'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import ButtonLong from './buttonLong';
+import { selectedProduct } from '../store/actions/products.actions';
 
 const CrearPc = ({ navigation, route })=>{
 
+  const dispatch = useDispatch();
   const products = useSelector(state => state.products.list)
- 
    
-    const handleSelectedProduct = (item) => {
+    const handleSelectedProduct = (id,title) => {
+      dispatch(selectedProduct(id));
+
         navigation.navigate('Recommended', {
-          id: item.id,
-          title: item.title,
-          productID:item.id
+          title:title
         });
       }
       const handleSelectedGame = () => {
@@ -43,7 +44,7 @@ const CrearPc = ({ navigation, route })=>{
             <FlatList
                  data={products}
                  renderItem={(data) => (
-                   <TouchableOpacity onPress={()=>{ handleSelectedProduct(data.item)}} style={styles.card}><Text>{data.item.title}</Text></TouchableOpacity> 
+                   <TouchableOpacity onPress={()=>{ handleSelectedProduct(data.item.id,data.item.title)}} style={styles.card}><Text>{data.item.title}</Text></TouchableOpacity> 
                     )}
                  keyExtractor={item => item.id}
              />

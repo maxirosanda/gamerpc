@@ -1,12 +1,14 @@
 import React from 'react'
 import { View,Text,StyleSheet, TouchableOpacity,FlatList} from 'react-native'
-import { PRODUCTS } from '../data/products';
 import CardBig from './cardBig';
 import ButtonLong from './buttonLong';
+import { useSelector} from 'react-redux';
 
 const Recommended = ({ navigation, route })=>{
+    const products = useSelector(state => state.products.list)
+    const selectedId = useSelector(state =>state.products.selectedId)
+    const product = products.find(item => item.id === selectedId);
 
-    const recommendedPc = PRODUCTS.find(item => item.id === route.params.productID).components;
    
     return(
         <View style={styles.conteiner}>
@@ -17,11 +19,13 @@ const Recommended = ({ navigation, route })=>{
                 
             </View>
             <FlatList
-                 data={recommendedPc}
+                 data={product.components}
                  renderItem={(data) => (
-                   <CardBig item={data.item}/>
+                     
+                   <CardBig component={data}/>
+                  
                     )}
-                 keyExtractor={item => item.id}
+                 keyExtractor={component => component.id}
              />
          <ButtonLong text={"CHAT CON EL VENDEDOR"} handleSelected={()=>{}}></ButtonLong>
          <ButtonLong text={"VOLVER A LA HOME"} handleSelected={()=>{}}></ButtonLong>

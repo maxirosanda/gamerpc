@@ -1,14 +1,15 @@
 import React from 'react'
 import { View,Text,StyleSheet,TextInput,FlatList,TouchableOpacity} from 'react-native'
 import Circle from './circle'
-import { GAMES } from '../data/games';
+import { useSelector, useDispatch } from 'react-redux';
 import ButtonLong from './buttonLong';
+
 const Game = ({ navigation, route })=>{
-    
+    const games = useSelector(state => state.games.list)
     return(
         <View style={styles.conteiner}>
         <TextInput style={styles.search}  placeholder="    Buscar" />
-            <FlatList style={styles.circles}  data={GAMES} keyExtractor={item => item.id} renderItem={(data) => (
+            <FlatList style={styles.circles}  data={games} keyExtractor={item => item.id} renderItem={(data) => (
                 < Circle item={data.item} />  
             )}/> 
              <ButtonLong text={"Ver Opciones de Computadoras"} handleSelected={()=>{}}></ButtonLong>

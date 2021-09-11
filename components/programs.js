@@ -1,14 +1,17 @@
 import React from 'react'
 import { View,Text,StyleSheet,TextInput,FlatList,TouchableOpacity} from 'react-native'
 import Circle from './circle'
-import { PROGRAMS } from '../data/programs';
 import ButtonLong from './buttonLong';
+import { useSelector, useDispatch } from 'react-redux';
+
 const Programs = ({ navigation, route })=>{
     
+    const programs = useSelector(state => state.programs.list)
+
     return(
         <View style={styles.conteiner}>
         <TextInput style={styles.search}  placeholder="    Buscar" />
-            <FlatList style={styles.circles}  numColumns={3}  data={PROGRAMS} keyExtractor={item => item.id} renderItem={(data) => (
+            <FlatList style={styles.circles}  numColumns={3}  data={programs} keyExtractor={item => item.id} renderItem={(data) => (
                 < Circle item={data.item} />  
             )}/> 
             <ButtonLong text={"Ver Opciones de Computadoras"} handleSelected={()=>{}}></ButtonLong>
