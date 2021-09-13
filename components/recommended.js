@@ -40,7 +40,7 @@ const styles= StyleSheet.create({
         },
         bar:{
             flexDirection:"row",
-            backgroundColor:"#E53607",
+            backgroundColor:"#FB6D01",
             
         },
         barButton:{

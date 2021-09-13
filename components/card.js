@@ -13,7 +13,7 @@ const Card = ({item})=>{
 const styles= StyleSheet.create({
     card:{
         height:120,
-        backgroundColor:"#EB1A17",
+        backgroundColor:"#FB6D01",
         margin:15,
         borderRadius:10,
         elevation:2

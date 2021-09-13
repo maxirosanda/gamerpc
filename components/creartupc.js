@@ -110,7 +110,7 @@ card:{
 rectangulo:{
   width:80,
   height:50,
-  backgroundColor:"#DEC600",
+  backgroundColor:"#FB6D01",
   borderRadius:8,
   marginLeft:8,
   marginRight:18,

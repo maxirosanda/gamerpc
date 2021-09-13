@@ -12,7 +12,7 @@ const CardBig = ({component})=>{
 const styles= StyleSheet.create({
     card:{
         height:220,
-        backgroundColor:"#EB1A17",
+        backgroundColor:"#FB6D01",
         margin:15,
         borderColor:"#000000",
         borderBottomWidth:5,

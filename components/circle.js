@@ -12,7 +12,7 @@ const Circle = ({item})=>{
 
 const styles= StyleSheet.create({
     circle:{
-        backgroundColor:"#C30D0A",
+        backgroundColor:"#FB6D01",
         flexGrow:1,
         flexDirection:"row",
         width:100,

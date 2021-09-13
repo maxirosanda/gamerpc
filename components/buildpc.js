@@ -11,7 +11,8 @@ const BuildPc = ({ navigation, route })=>{
                 <FlatList
                  data={components}
                  renderItem={(data) => (
-                  <Card item={data.item}/>
+                  <Card item={data.item}>
+                  </Card>
                     )}
                  keyExtractor={item => item.id}
              />
@@ -23,7 +24,7 @@ const styles= StyleSheet.create({
     conteiner:{
         width:"100%",
         height:"100%"
-        }
+        },
 })
 
 export default BuildPc
