@@ -33,8 +33,8 @@ const styles= StyleSheet.create({
         borderColor:"#000000"
     },
     circles:{
-    backgroundColor:"#CEDF64",
     height:100,
+    alignContent:"center"
     }
 })
 

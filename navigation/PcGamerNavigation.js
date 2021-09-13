@@ -8,7 +8,6 @@ import Programs from '../components/programs'
 import BuildPc  from '../components/buildpc';
 
 const Stack = createNativeStackNavigator();
-const Stack2 = createNativeStackNavigator();
 const PcGamerNavigator = () => (
   <NavigationContainer>
    

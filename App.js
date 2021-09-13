@@ -11,8 +11,6 @@ import store from './store';
 
 export default function App() {
 
-  const [seleccionRecomendada, setSeleccionRecomendada] = useState(false);
-  const [recomendada, setRecomendada] = useState({})
 
   const [loaded] = useFonts({
     'ZCOOL': require('./assets/fonts/ZCOOLKuaiLe-Regular.ttf')

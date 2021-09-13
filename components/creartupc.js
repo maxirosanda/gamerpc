@@ -3,6 +3,8 @@ import { View,Text,StyleSheet,TouchableOpacity,FlatList } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux';
 import ButtonLong from './buttonLong';
 import { selectedProduct } from '../store/actions/products.actions';
+import Cuadrado from './cuadrado';
+import { AntDesign } from '@expo/vector-icons'; 
 
 const CrearPc = ({ navigation, route })=>{
 
@@ -34,8 +36,8 @@ const CrearPc = ({ navigation, route })=>{
     return(
         <View style={styles.conteiner}>
             <View style={styles.fila}>
-                <TouchableOpacity style={styles.cuadrado} onPress={handleSelectedPrograms}></TouchableOpacity>
-                <TouchableOpacity style={styles.cuadrado} onPress={handleSelectedGame}></TouchableOpacity>
+              <Cuadrado handleSelected ={handleSelectedPrograms} />
+              <Cuadrado handleSelected ={handleSelectedGame} />
             </View>
             <ButtonLong text={"ARMAR MI PC MANUALMENTE"} handleSelected={handleSelectedBuildPc}></ButtonLong>
             <View style={styles.titulorecomendadas}>
@@ -44,7 +46,16 @@ const CrearPc = ({ navigation, route })=>{
             <FlatList
                  data={products}
                  renderItem={(data) => (
-                   <TouchableOpacity onPress={()=>{ handleSelectedProduct(data.item.id,data.item.title)}} style={styles.card}><Text>{data.item.title}</Text></TouchableOpacity> 
+                   <TouchableOpacity onPress={()=>{ handleSelectedProduct(data.item.id,data.item.title)}} style={styles.card}>
+                     <View style={styles.rectangulo}></View>
+                     <View>
+                     <Text style={styles.textrecomendada}>{data.item.title}</Text>
+                     <Text style={styles.textrecomendada}>{data.item.price}</Text>
+                     <Text style={styles.textrecomendada}>{data.item.description}</Text>
+                     </View>
+                     <AntDesign name="rightcircle" style={styles.flechaderecha} size={24} color="black" />
+                     </TouchableOpacity> 
+
                     )}
                  keyExtractor={item => item.id}
              />
@@ -64,6 +75,7 @@ cuadrado:{
     flexGrow:1,
     height:120,
     margin:20,
+    borderRadius:8,
     backgroundColor:"#DEC600",
 },
 fila:{
@@ -81,10 +93,31 @@ textrecomendadas:{
     textAlignVertical:"center",
     fontFamily:"ZCOOL",
 },
+textrecomendada:{
+  flexDirection:"column",
+  textAlign:"left"
+},
 card:{
-    height:80,
-    backgroundColor:"#EB1A17",
+    height:100,
+    flexDirection:"row",
+    alignContent:"center",
+    alignItems:"center",
+    marginBottom:5,
     margin:5,
+    elevation: 2,
+    borderRadius: 5
+},
+rectangulo:{
+  width:80,
+  height:50,
+  backgroundColor:"#DEC600",
+  borderRadius:8,
+  marginLeft:8,
+  marginRight:18,
+  
+},
+flechaderecha:{
+  marginLeft:30
 }
 
 })

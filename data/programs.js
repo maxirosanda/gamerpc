@@ -12,19 +12,91 @@ export const PROGRAMS = [
       description:"kjfgshgsghafgglhaghaighjaio"
     },
     {
-      id: '58694a0f-fda1-471f-bdfd-14dd71e29d7b2',
+      id: '58694a0f-fda1-471f-bdfd-14mmm1e29d7b2',
       title: 'Photoshop',
       url: "jhgdghdghiodgeg",
       description:"kjfgshgsghasgjlhaghaighjaij"
     },
     {
-        id: '58694a0f-fda1-471f-bsfd-1455sds29d7s',
+        id: '58694a0f-fda1-471f-bsfd-1999sds29d7s',
         title: 'Photoshop',
         url: "jhgdghdghiodgeg",
         description:"kjfgshgsghasgjlhaghaighjais"
       },
       {
-        id: '586sda0f-fda1-471f-bdfd-145571e29d7d',
+        id: '586sda0f-fda1-471f-bdfd-14321e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-bdfd-432571e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-bdfd-145342e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-bd99-145571e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-66fd-145571e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-666fd-145571e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-111f-bdfd-145571e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-333f-bdfd-145571e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-bdfd-122271e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-bdfd-145fffe29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-bffd-145571e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-471f-bffd-1455e1e29d7d',
+        title: 'Photoshop',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      },
+      {
+        id: '586sda0f-fda1-47ef-bdfd-145571e29d7d',
         title: 'Photoshop',
         url: "jhgdghdghiodgeg",
         description:"kjfgshgsghasgjlhaghaighjaio"

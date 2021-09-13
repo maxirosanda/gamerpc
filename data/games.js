@@ -12,13 +12,34 @@ export const GAMES = [
       description:"kjfgshgsghafgglhaghaighjaio"
     },
     {
-      id: '58694a0f-3da1-471f-bdfd-145571e29d72',
+      id: '58694a0f-3da1-471x-bdfd-145571e29d72',
       title: 'Counter Striker',
       url: "jhgdghdghiodgeg",
       description:"kjfgshgsghasgjlhaghaighjaio"
     },
     {
-        id: '586320f-3da1-471f-bdfd-145571e29d72',
+        id: '586320f-xda1-471f-bdfd-145571e29d72',
+        title: 'Counter Striker 2',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      }
+      ,
+    {
+        id: '586320f-3da1-471f-bdfd-145x71e2xd72',
+        title: 'Counter Striker 2',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      }
+      ,
+    {
+        id: '586320f-3da1-471f-bdfd-145571xx9d72',
+        title: 'Counter Striker 2',
+        url: "jhgdghdghiodgeg",
+        description:"kjfgshgsghasgjlhaghaighjaio"
+      }
+      ,
+    {
+        id: '586320f-3da1-471f-bdsd-145571e29d72',
         title: 'Counter Striker 2',
         url: "jhgdghdghiodgeg",
         description:"kjfgshgsghasgjlhaghaighjaio"
