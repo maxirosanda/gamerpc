@@ -1,10 +1,16 @@
 import React from 'react'
 import { View,Text,StyleSheet,TouchableOpacity} from 'react-native'
+import Rectangulo from './rectangulo'
 
 const CardBig = ({component})=>{
     return(
         <TouchableOpacity style={styles.card}>
-      <Text>{component.item.name}</Text> 
+            <View style={{flexDirection:"row"}}>
+                <Rectangulo/>
+                <Text style={styles.titulo}>{component.item.name}</Text>
+            </View>
+             <Text style={styles.description}>{component.item.description}</Text>
+             <Text style={styles.vermas}>Ver Mas</Text> 
         </TouchableOpacity>
     )
 }
@@ -12,10 +18,26 @@ const CardBig = ({component})=>{
 const styles= StyleSheet.create({
     card:{
         height:220,
-        backgroundColor:"#FB6D01",
         margin:15,
         borderColor:"#000000",
-        borderBottomWidth:5,
+        borderBottomWidth:5
+
+    },
+    titulo:{
+        fontSize:20,
+        width:"70%",
+        textAlign:"left"
+    },
+    description:{
+        flexDirection:"row",
+        fontSize:16,
+        marginTop:20
+    },
+    vermas:{
+        textAlign:"right",
+        fontSize:20,
+        marginRight:20
+
     }
 })
 

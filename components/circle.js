@@ -4,9 +4,12 @@ import { View,Text,StyleSheet,TouchableOpacity} from 'react-native'
 const Circle = ({item})=>{
     
     return(
-        <TouchableOpacity style={styles.circle}>
-      <Text style={styles.text}>{item.title}</Text> 
-        </TouchableOpacity>
+        <View>
+            <TouchableOpacity > 
+                <View style={styles.circle}></View>
+                <Text style={styles.text}>{item.title}</Text>
+            </TouchableOpacity>
+        </View>
     )
 }
 
@@ -24,7 +27,8 @@ const styles= StyleSheet.create({
         },
         text:{
             textAlign:"center",
-            textAlignVertical:"center"
+            textAlignVertical:"center",
+            marginBottom:8,
         }
 })
 

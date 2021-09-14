@@ -5,6 +5,7 @@ import ButtonLong from './buttonLong';
 import { selectedProduct } from '../store/actions/products.actions';
 import Cuadrado from './cuadrado';
 import { AntDesign } from '@expo/vector-icons'; 
+import Rectangulo from './rectangulo'
 
 const CrearPc = ({ navigation, route })=>{
 
@@ -47,7 +48,7 @@ const CrearPc = ({ navigation, route })=>{
                  data={products}
                  renderItem={(data) => (
                    <TouchableOpacity onPress={()=>{ handleSelectedProduct(data.item.id,data.item.title)}} style={styles.card}>
-                     <View style={styles.rectangulo}></View>
+                     <Rectangulo/>
                      <View>
                      <Text style={styles.textrecomendada}>{data.item.title}</Text>
                      <Text style={styles.textrecomendada}>{data.item.price}</Text>
