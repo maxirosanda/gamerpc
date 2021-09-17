@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { StyleSheet} from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
-import PcGamerNavigator from './navigation/PcGamerNavigation';
+import MainNavigator from './navigation';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -20,7 +20,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-    <PcGamerNavigator />
+    <MainNavigator/>
     </Provider>
   );
 }

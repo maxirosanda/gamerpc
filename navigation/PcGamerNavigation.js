@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CrearPc from '../components/creartupc'
 import Recommended from '../components/recommended'
@@ -9,8 +8,7 @@ import BuildPc  from '../components/buildpc';
 
 const Stack = createNativeStackNavigator();
 const PcGamerNavigator = () => (
-  <NavigationContainer>
-   
+
     <Stack.Navigator>
         <Stack.Screen name="Home" component={CrearPc} options={{ title: 'Crear PC',headerStyle: { backgroundColor: "#ffffff" } }}/>
         <Stack.Screen name="Recommended" component={Recommended} options={{title: "Recomendada"}} />
@@ -19,8 +17,6 @@ const PcGamerNavigator = () => (
         <Stack.Screen name="BuildPc" component={BuildPc} options={{title: "Armar Pc Manualmente"}} />
     </Stack.Navigator>
 
-
-  </NavigationContainer>
 );
 
 export default PcGamerNavigator;
